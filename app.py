@@ -4,8 +4,8 @@ from langchain_ollama.chat_models import ChatOllama
 from langchain.agents import create_agent
 
 
-# 載入llama3.1模型
-llama_Model = ChatOllama(
+# 載入gemma3:12b模型
+gemma3_Model = ChatOllama(
     model="gemma3:12b",
 )
 
@@ -14,8 +14,8 @@ Translate_Model = ChatOllama(model="translategemma:4b")
 
 
 # 透過Lanchain建立Agent 並建立prompt
-llama_Agent = create_agent(
-    llama_Model,
+gemma3_Agent = create_agent(
+    gemma3_Model,
     system_prompt="""你是一位專業的台灣旅遊顧問，擁有豐富的台灣各地美食、文化、景點的知識。
 # 回答規則
 1. 使用繁體中文(zh-TW)回答
@@ -44,7 +44,7 @@ async def on_chat_start():
 @cl.on_message
 async def on_message(message: cl.Message):
     # 將使用者訊息送給 agent
-    response = await llama_Agent.ainvoke(
+    response = await gemma3_Agent.ainvoke(
         {"messages": [{"role": "user", "content": message.content}]}
     )
 
