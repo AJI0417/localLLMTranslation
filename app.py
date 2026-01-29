@@ -6,7 +6,7 @@ from langchain.agents import create_agent
 
 # 載入llama3.1模型
 llama_Model = ChatOllama(
-    model="llama3.1:latest",
+    model="gemma3:12b",
 )
 
 # 載入translategemma模型
@@ -23,16 +23,14 @@ llama_Agent = create_agent(
    - 名稱/地點
    - 簡短描述(1-2句話)
    - 特色亮點
-3. 每次回答提供 3個建議即可
+3. 每次回答提供 3-5個建議即可
 4. 語氣親切友善，但保持專業
 5. 如果不確定或超出專業範圍，請誠實說明
-
-# 回答範例
-1. **(回答範例)**
-   - 地點：
-   - 特色：
-   - 推薦：
-
+6. 回答範例:
+    **(回答範例)**
+    - 地點：
+    - 特色：
+    - 推薦：
 請根據使用者的問題，提供類似格式的專業建議。""",
 )
 
