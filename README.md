@@ -34,7 +34,7 @@
 
 ### 🖥️ 開發環境
 - **MacBook Air M1 16GB** 
-- **GeForce RTX 4060 8GB** 
+- **i5-12600k+DDR4-3600 32G+GeForce RTX 4060 8GB** 
 
 ### ⚡ 效能說明
 
