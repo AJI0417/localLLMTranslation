@@ -6,7 +6,7 @@
 
 本專案整合了兩個 AI 模型：
 
-- **LLaMA 3.1 模型** 🦙：擔任台灣導遊專家，提供台灣各地美食、文化和地標的專業建議
+- **Gemma3:12b 模型** 🦙：擔任台灣導遊專家，提供台灣各地美食、文化和地標的專業建議
 - **TranslateGemma 模型** 🌐：將導遊的回應從繁體中文翻譯成英文
 
 使用者可以詢問任何關於台灣的問題，系統會以條列式的方式提供專業建議，並附上英文翻譯結果。✨
@@ -25,7 +25,7 @@
 - **Python 版本**：3.10 或以上 🐍
 - **Ollama**：需要在本地安裝並運行 Ollama
 - **必要模型**：
-  - `llama3.1:latest` 🦙
+  - `gemma3:12b` 🦙
   - `translategemma:4b` 🌐
 
 ## ⚙️ 硬體規格參考
@@ -42,11 +42,11 @@
 
 - 如果您的硬體配置**比上述規格更高級**，您可以：
   - ✅ 體驗**更快的回覆速度**
-  - ✅ 嘗試**更大的模型**（如 `llama3.1:70b` 或 `translategemma:27b`）
+  - ✅ 嘗試**更大的模型**（如 `gemma3:27b` 或 `translategemma:27b`）
   - ✅ 同時運行**多個模型**
 
 - 如果您的硬體配置**較低**：
-  - 建議使用較小的模型（如 `llama3.1:8b`）
+  - 建議使用較小的模型（如 `gemma3:4b`）
   - 回覆時間可能需要更長
   - 考慮關閉其他佔用資源的應用程式
 
@@ -67,8 +67,8 @@ pip install -r requirements.txt
 ### 3. 下載所需的 AI 模型
 
 ```bash
-# 下載 LLaMA 3.1 模型
-ollama pull llama3.1:latest
+# 下載 Gemma3 模型
+ollama pull gemma3:12b
 
 # 下載 TranslateGemma 模型
 ollama pull translategemma:4b
@@ -199,7 +199,7 @@ ollama serve
 重新下載所需模型：
 
 ```bash
-ollama pull llama3.1:latest
+ollama pull gemma3:12b
 ollama pull translategemma:4b
 ```
 
